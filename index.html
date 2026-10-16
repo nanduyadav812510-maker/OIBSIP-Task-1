@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Oasis Infobyte Web Development Internship Level 1 project dashboard.">
+  <title>OIBSIP | Level 1 Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="profile" aria-labelledby="page-title">
+      <img class="profile-avatar" src="profile.jpg" alt="Nandini Gurram">
+      <p class="eyebrow">Oasis Infobyte · Web Development Internship</p>
+      <h1 id="page-title">Hii, I am Nandini Gurram</h1>
+      <p class="subtitle">Web Development Intern | Oasis Infobyte</p>
+    </header>
+
+    <section class="projects" aria-labelledby="level-title">
+      <div class="section-heading">
+        <p class="eyebrow">My work</p>
+        <h2 id="level-title">Level 1</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="task-number">01</div>
+          <p class="card-kicker">Task 1</p>
+          <h3>Landing Page</h3>
+          <p class="card-description">A focused introduction to personalized B.Tech guidance.</p>
+          <div class="card-actions">
+            <a class="button button-blue" href="TASK_1/index.html">View Active Website</a>
+            <a class="button button-red" href="TASK_1/index.html">Demo unavailable · View project</a>
+            <span class="button button-muted" data-repository="task-1" aria-disabled="true">GitHub URL not configured</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="task-number">02</div>
+          <p class="card-kicker">Task 2</p>
+          <h3>Portfolio Website</h3>
+          <p class="card-description">A personal portfolio with skills, projects, and contact details.</p>
+          <div class="card-actions">
+            <a class="button button-blue" href="TASK_2/index.html">View Active Website</a>
+            <a class="button button-red" href="TASK_2/index.html">Demo unavailable · View project</a>
+            <span class="button button-muted" data-repository="task-2" aria-disabled="true">GitHub URL not configured</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="task-number">03</div>
+          <p class="card-kicker">Task 3</p>
+          <h3>Temperature Converter</h3>
+          <p class="card-description">Convert between Celsius, Fahrenheit, and Kelvin.</p>
+          <div class="card-actions">
+            <a class="button button-blue" href="TASK_3/index.html">View Active Website</a>
+            <a class="button button-red" href="TASK_3/index.html">Demo unavailable · View project</a>
+            <span class="button button-muted" data-repository="task-3" aria-disabled="true">GitHub URL not configured</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer class="site-footer"><span>OIBSIP · Level 1</span><span>Built with HTML, CSS, and JavaScript</span></footer>
+  </main>
+  <script>
+    const repositoryUrls = {
+      'task-1': 'https://github.com/nanduyadav812510-maker/OIBSIP-Task-1',
+      'task-2': '',
+      'task-3': ''
+    };
+
+    document.querySelectorAll('[data-repository]').forEach((placeholder) => {
+      const url = repositoryUrls[placeholder.dataset.repository];
+      if (!url || !/^https?:\/\//i.test(url)) return;
+
+      const link = document.createElement('a');
+      link.className = 'button button-muted';
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'View GitHub Repo';
+      placeholder.replaceWith(link);
+    });
+  </script>
+</body>
+</html>

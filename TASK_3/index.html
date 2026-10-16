@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert temperatures between Celsius, Fahrenheit, and Kelvin.">
+  <title>Temperature Converter | OIBSIP</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="../index.html">OIBSIP <span>/</span> Task 03</a><a class="back-link" href="../index.html">← Dashboard</a></header>
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">A small utility for everyday conversions</p>
+      <h1>Temperature,<br><span>translated.</span></h1>
+      <p>Choose a starting scale and a destination. The conversion happens right here, without a page reload.</p>
+      <div class="scale-note"><span>°C</span><span>°F</span><span>K</span></div>
+    </section>
+    <section class="converter" aria-labelledby="converter-title">
+      <div class="converter-heading"><p class="eyebrow">OIBSIP · Level 1</p><h2 id="converter-title">Convert temperature</h2></div>
+      <form id="converter-form" novalidate>
+        <label for="temperature">Temperature value</label>
+        <input id="temperature" name="temperature" type="number" inputmode="decimal" step="any" placeholder="e.g. 24" required aria-describedby="input-hint">
+        <p id="input-hint" class="input-hint">Values below absolute zero are not physically valid.</p>
+        <div class="unit-grid">
+          <div><label for="from-unit">From</label><select id="from-unit" name="from-unit"><option value="celsius">Celsius (°C)</option><option value="fahrenheit">Fahrenheit (°F)</option><option value="kelvin">Kelvin (K)</option></select></div>
+          <button id="swap-units" class="swap-button" type="button" aria-label="Swap temperature units" title="Swap units">⇄</button>
+          <div><label for="to-unit">To</label><select id="to-unit" name="to-unit"><option value="fahrenheit">Fahrenheit (°F)</option><option value="celsius">Celsius (°C)</option><option value="kelvin">Kelvin (K)</option></select></div>
+        </div>
+        <button class="convert-button" type="submit">Convert temperature <span aria-hidden="true">→</span></button>
+        <button class="clear-button" id="clear-form" type="reset">Clear</button>
+      </form>
+      <p id="conversion-message" class="message" role="status" aria-live="polite"></p>
+      <output id="result" class="result" aria-live="polite" aria-label="Conversion result">Enter a value to begin</output>
+    </section>
+  </main>
+  <footer><span>Temperature Converter</span><span>HTML · CSS · JavaScript</span></footer>
+</body>
+</html>

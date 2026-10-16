@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title description">
+  <title id="title">Nandini Gurram initials avatar</title>
+  <desc id="description">A green circular placeholder avatar with the initials NG.</desc>
+  <circle cx="80" cy="80" r="80" fill="#176b52"/>
+  <circle cx="80" cy="80" r="72" fill="none" stroke="#d9efdf" stroke-width="2"/>
+  <text x="80" y="96" fill="#ffffff" font-family="sans-serif" font-size="48" font-weight="700" text-anchor="middle">NG</text>
+</svg>

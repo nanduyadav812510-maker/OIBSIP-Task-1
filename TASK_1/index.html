@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personalized learning and guidance for B.Tech students and aspirants.">
+  <title>The Strategic Mentor | Guidance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html">The Strategic Mentor</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">Menu</button>
+      <nav id="primary-nav" class="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="../index.html">Portfolio</a>
+        <a href="#community">WhatsApp Community</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Guidance, made personal</p>
+        <h1>Let's navigate your B.Tech journey, together.</h1>
+        <p class="hero-copy">I provide personalized guidance to engineering undergraduates and aspirants. No generic advice, just practical strategies tailored to your goals.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Get Guidance <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="#guidance">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-mark" aria-hidden="true">SM</div>
+    </section>
+    <section class="metrics" aria-labelledby="metrics-title">
+      <div class="content-width">
+        <div class="metrics-heading"><p class="eyebrow">At a glance</p><h2 id="metrics-title">Guidance built around you</h2></div>
+        <p class="placeholder-note">Public metrics have not been provided.</p>
+        <div class="metrics-grid">
+          <div><strong>—</strong><span>Students guided<br><small>Not configured</small></span></div>
+          <div><strong>—</strong><span>Personal mentees<br><small>Not configured</small></span></div>
+          <div><strong>—</strong><span>Years of experience<br><small>Not configured</small></span></div>
+          <div><strong>—</strong><span>Alumni network<br><small>Not configured</small></span></div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="content-section about-section">
+      <div class="content-width split-layout">
+        <div><p class="eyebrow">About</p><h2>A clearer next step starts with your context.</h2></div>
+        <div><p>This space is for practical, individual guidance through the decisions that shape an engineering journey. Share what you are working toward, where you are stuck, and what constraints matter to you.</p><p>Personal background and experience details can be added here when ready.</p></div>
+      </div>
+    </section>
+    <section id="guidance" class="content-section guidance-section">
+      <div class="content-width">
+        <p class="eyebrow">Guidance and learning</p><h2>Useful conversations. Concrete next steps.</h2>
+        <div class="offer-grid">
+          <article><span class="offer-index">01</span><h3>Plan your path</h3><p>Talk through goals, options, and the next decision in front of you.</p></article>
+          <article><span class="offer-index">02</span><h3>Learn with focus</h3><p>Turn broad ambitions into a manageable plan that fits your situation.</p></article>
+          <article><span class="offer-index">03</span><h3>Keep moving</h3><p>Review progress and adjust your plan as your priorities change.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="community" class="community-section">
+      <div class="content-width community-inner"><div><p class="eyebrow">Community</p><h2>A place to learn alongside other students.</h2></div><p>Community access details are not configured yet. Check back here for a verified invite link.</p></div>
+    </section>
+    <section id="contact" class="contact-section">
+      <div class="content-width contact-inner"><p class="eyebrow">Contact</p><h2>Start with what you need help thinking through.</h2><p>Contact details are not configured yet. Add a verified email or guidance form link here when available.</p><a class="back-link" href="../index.html">← Back to OIBSIP dashboard</a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>The Strategic Mentor</span><a href="../index.html">OIBSIP project dashboard</a></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    menuButton.addEventListener('click', () => {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isExpanded));
+      navigation.classList.toggle('is-open', !isExpanded);
+    });
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navigation.classList.remove('is-open');
+      }
+    });
+  </script>
+</body>
+</html>
